@@ -1,5 +1,4 @@
 #get data and corresponding activity data
-
 #set dir to location of data files
 dir<-getwd()
 
