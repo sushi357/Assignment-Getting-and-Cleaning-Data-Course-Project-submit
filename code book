@@ -1,0 +1,133 @@
+The following transformations were performed on the input data to produce the output data. The script:
+
+-loads the data set “train.txt” from its directory 
+
+-labels the variable names in the “train.txt” data set to correspond to the descriptive variable names contained in "features.txt"
+
+-adds the “activity” and “subject” variables contained in "y_train.txt" and “subject_train.txt”, respectively, to the “train.txt” data set
+
+-the entries in the “activity” variable are converted from a numeric value to a descriptive character value according to the conversion contained in the “activity_labels” document
+
+-the same above-mentioned steps are performed on the “test.txt” data set
+
+-the “train.txt” and “test.txt” data sets are combined into a single data set
+
+-a subset of the combined data set is taken containing only those variables that are a mean or standard deviation of a measurement
+
+-the average of each remaining variable is calculated for each test subject and each activity level
+
+-a new data frame is produced containing the averages of each variable for each test subject and each activity level
+this data frame is output as .txt table
+
+The variables in the output are: 
+
+"1" "subject" 
+
+IS THE NUMBER OF THE TEST SUBJECT. THIS RANGES FROM 1-30
+
+"2" "activity" 
+
+IS THE ACTIVITY OF THE TEST SUBJECT. POSSIBLE VALUES ARE: 
+	-"WALKING"
+ 	-"WALKING_UPSTAIRS"
+	-"WALKING_DOWNSTAIRS"
+ 	-"SITTING"
+ 	-"STANDING"
+	-"LAYING"
+
+THE FOLLOWING VARIABLES CONTAIN EITHER THE WORD “Acc”, “Gyro” OR “angle”:
+
+	Acc: THE ACCELERATION SIGNAL FROM THE SMART PHONE ACCELEROMETER IN STANDARD GRAVITY UNITS 'g' 
+	Gyro: THE ANGULAR VELOCITY VECTOR MEASURED BY THE SMART PHONE GYROSCOPE 
+	Angle: THE ANGLE MEASURED BY THE SMART PHONE GYROSCOPE IN RADIANS 
+
+VARIABLES WITH mean() IN THEIR NAME CORRESPOND TO AVERAGES OF 3 DIMENTIONAL SIGNALS RECORDED BY THE SAMSUNG GALAXY S II. 
+
+VARIABLES WITH std() IN THEIR NAME CORRESPOND TO THE STANDARD DEVIATIONS OF 3 DIMENTIONAL SIGNALS RECORDED BY THE SAMSUNG GALAXY S II.
+
+"3" "tBodyAcc-mean()-X average"
+"4" "tBodyAcc-mean()-Y average"
+"5" "tBodyAcc-mean()-Z average"
+"6" "tBodyAcc-std()-X average"
+"7" "tBodyAcc-std()-Y average"
+"8" "tBodyAcc-std()-Z average"
+"9" "tGravityAcc-mean()-X average"
+"10" "tGravityAcc-mean()-Y average"
+"11" "tGravityAcc-mean()-Z average"
+"12" "tGravityAcc-std()-X average"
+"13" "tGravityAcc-std()-Y average"
+"14" "tGravityAcc-std()-Z average"
+"15" "tBodyAccJerk-mean()-X average"
+"16" "tBodyAccJerk-mean()-Y average"
+"17" "tBodyAccJerk-mean()-Z average"
+"18" "tBodyAccJerk-std()-X average"
+"19" "tBodyAccJerk-std()-Y average"
+"20" "tBodyAccJerk-std()-Z average"
+"21" "tBodyGyro-mean()-X average"
+"22" "tBodyGyro-mean()-Y average"
+"23" "tBodyGyro-mean()-Z average"
+"24" "tBodyGyro-std()-X average"
+"25" "tBodyGyro-std()-Y average"
+"26" "tBodyGyro-std()-Z average"
+"27" "tBodyGyroJerk-mean()-X average"
+"28" "tBodyGyroJerk-mean()-Y average"
+"29" "tBodyGyroJerk-mean()-Z average"
+"30" "tBodyGyroJerk-std()-X average"
+"31" "tBodyGyroJerk-std()-Y average"
+"32" "tBodyGyroJerk-std()-Z average"
+"33" "tBodyAccMag-mean() average"
+"34" "tBodyAccMag-std() average"
+"35" "tGravityAccMag-mean() average"
+"36" "tGravityAccMag-std() average"
+"37" "tBodyAccJerkMag-mean() average"
+"38" "tBodyAccJerkMag-std() average"
+"39" "tBodyGyroMag-mean() average"
+"40" "tBodyGyroMag-std() average"
+"41" "tBodyGyroJerkMag-mean() average"
+"42" "tBodyGyroJerkMag-std() average"
+"43" "fBodyAcc-mean()-X average"
+"44" "fBodyAcc-mean()-Y average"
+"45" "fBodyAcc-mean()-Z average"
+"46" "fBodyAcc-std()-X average"
+"47" "fBodyAcc-std()-Y average"
+"48" "fBodyAcc-std()-Z average"
+"49" "fBodyAcc-meanFreq()-X average"
+"50" "fBodyAcc-meanFreq()-Y average"
+"51" "fBodyAcc-meanFreq()-Z average"
+"52" "fBodyAccJerk-mean()-X average"
+"53" "fBodyAccJerk-mean()-Y average"
+"54" "fBodyAccJerk-mean()-Z average"
+"55" "fBodyAccJerk-std()-X average"
+"56" "fBodyAccJerk-std()-Y average"
+"57" "fBodyAccJerk-std()-Z average"
+"58" "fBodyAccJerk-meanFreq()-X average"
+"59" "fBodyAccJerk-meanFreq()-Y average"
+"60" "fBodyAccJerk-meanFreq()-Z average"
+"61" "fBodyGyro-mean()-X average"
+"62" "fBodyGyro-mean()-Y average"
+"63" "fBodyGyro-mean()-Z average"
+"64" "fBodyGyro-std()-X average"
+"65" "fBodyGyro-std()-Y average"
+"66" "fBodyGyro-std()-Z average"
+"67" "fBodyGyro-meanFreq()-X average"
+"68" "fBodyGyro-meanFreq()-Y average"
+"69" "fBodyGyro-meanFreq()-Z average"
+"70" "fBodyAccMag-mean() average"
+"71" "fBodyAccMag-std() average"
+"72" "fBodyAccMag-meanFreq() average"
+"73" "fBodyBodyAccJerkMag-mean() average"
+"74" "fBodyBodyAccJerkMag-std() average"
+"75" "fBodyBodyAccJerkMag-meanFreq() average"
+"76" "fBodyBodyGyroMag-mean() average"
+"77" "fBodyBodyGyroMag-std() average"
+"78" "fBodyBodyGyroMag-meanFreq() average"
+"79" "fBodyBodyGyroJerkMag-mean() average"
+"80" "fBodyBodyGyroJerkMag-std() average"
+"81" "fBodyBodyGyroJerkMag-meanFreq() average"
+"82" "angle(tBodyAccMean,gravity) average"
+"83" "angle(tBodyAccJerkMean),gravityMean) average"
+"84" "angle(tBodyGyroMean,gravityMean) average"
+"85" "angle(tBodyGyroJerkMean,gravityMean) average"
+"86" "angle(X,gravityMean) average"
+"87" "angle(Y,gravityMean) average"
+"88" "angle(Z,gravityMean) average"
